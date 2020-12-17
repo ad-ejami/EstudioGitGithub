@@ -22,3 +22,4 @@ $git commit -m "mensaje" //subir los cambios al repositorio, es de buenas practi
 #revisar la historia del archivo
 $git log <name_file> //historia del los commits, nos muestra los tags
 $git show <name_file> //nos muestra los ultimos cambios hechos en el archivo
+$git diff <tag_name_file_v.a> <tag_name_file_v.b> //comparacion de los distintos commits hechos
