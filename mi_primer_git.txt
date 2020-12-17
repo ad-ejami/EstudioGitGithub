@@ -1,0 +1,4 @@
+Esta es mi primera guia para usar git
+
+Autor: Lalo Jami
+Alias: Honguito
