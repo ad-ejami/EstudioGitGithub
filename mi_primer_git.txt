@@ -2,3 +2,14 @@ Esta es mi primera guia para usar git
 
 Autor: Lalo Jami
 Alias: Honguito
+
+#instalacion de git en linux
+$ sudo apt-get install git
+
+#Creacion de archivos
+
+#Saber el estado del archivo
+
+#Configuracion del usuario
+
+#Hacer los primeros commits
