@@ -28,7 +28,7 @@ $git commit -m "mensaje" //subir los cambios al repositorio, es de buenas practi
 $git log <name_file> //historia del los commits, nos muestra los tags
 $git show <name_file> //nos muestra los ultimos cambios hechos en el archivo
 $git diff <tag_name_file_v.a> <tag_name_file_v.b> //comparacion de los distintos commits hechos
-
+$git diff //usar solo este comando me da los cambios que se hizo en staging y los cambios hechos en el disco duro
 #recupera antiguas versiones
 $git reset <tag_name_file_v> //nos permite volver a una version anterior
 #hay dos tipos de reset
