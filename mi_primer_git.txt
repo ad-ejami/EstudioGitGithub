@@ -29,9 +29,22 @@ $git log <name_file> //historia del los commits, nos muestra los tags
 $git show <name_file> //nos muestra los ultimos cambios hechos en el archivo
 $git diff <tag_name_file_v.a> <tag_name_file_v.b> //comparacion de los distintos commits hechos
 $git diff //usar solo este comando me da los cambios que se hizo en staging y los cambios hechos en el disco duro
+
 #recupera antiguas versiones
 $git reset <tag_name_file_v> //nos permite volver a una version anterior
 #hay dos tipos de reset
 $git reset <tag_name_file_v> --hard //Todo vuelve al estado anterior
 $git reset <tag_name_file_v> --solf //volvemos al estado anterior pero lo que tenemos en staging sigue en staging
 #que es staging? --> es el estado del archivo o archivos donde le hemos dado el comando (git add .) es decir tenemos un estado listo para hacer commit
+#tambien tenemos
+$git reset HEAD //Sacamos los archivos del area del staging, No para borrarlos ni nada de eso, solo para que los últimos cambios de estos archivos no
+//se envíen al último commit, a menos que cambiemos de opinión y los incluyamos de nuevo en staging con git add, por supuesto
+
+#Revisar antiguas versiones
+$git checkout <tag_name_file_v> <name_file>//nos trae la version anterior del archivo y nos lo pone en staging
+$git checkout master <name_file>//regresamos a la version del master
+#!!!importante, si realizamos un checkout, modificamos, hacemos add y commit crearemos una nueva version del archivo
+//diferencia entre checkout y reset:
+-checkout: nos permite mirar anteriores versiones, editarlas, y volver a la version master
+-reset: volvemos a la version anterior sin la posibilidad de regresar a las futuras versiones
+#!!!SOLO SE DEBE USAR RESET EN CASO DE EMERGENCIA
