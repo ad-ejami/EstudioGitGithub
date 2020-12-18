@@ -3,3 +3,21 @@ body {
   font-family: "Times";
   color: green;
 }
+.content{
+  background: yellow;
+  /*color: black;*/
+  border-radius: 5px;
+}
+.card-header{
+  color: black;
+  background: green;
+  border-radius: 4px;
+}
+.card-body{
+  color: black;
+  display: block;
+  text-align: justify;
+  margin: 25px;
+  margin-bottom: 25px;
+  padding-bottom: 25px;
+}
