@@ -22,6 +22,7 @@ $git config --global user.name "user_name"  //Configuracion del nombre de usuari
 $git config --global user.email "user_email" //Configuracion del correo del usuario
 #Hacer los primeros commits
 $git commit -m "mensaje" //subir los cambios al repositorio, es de buenas practicas el dejar un mensaje explicando los cambios que se realizo
+$git commit -am "mensaje" //guarda en stage y hace commit de una vez, solo funciona con archivos hechos git add anteriormente
 
 
 #revisar la historia del archivo
