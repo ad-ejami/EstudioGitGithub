@@ -71,7 +71,13 @@ git log – index.html- Busca los commits en un archivo en específico.
 git log -S “Por contenido”- Buscar los commits con el contenido dentro del archivo.
 git log > log.txt - guardar los logs en un archivo txt
 
+#Creacion de nueva rama y cambio de ramas
+$git branch <branch_name> //nos crea una nueva rama,copia todos los archivos de la rama actual
+$git checkout <branch_name> //cambia de rama
+$git branch //nos lista las ramas que tiene el proyecto
+
 #merge
 /*el merge es la fusion de dos ramas de git, donde une los ultimos cambios de la rama principal
 con los ultimos cambios de otra rama con la que se desea hacer el merge. Esto se debe hacer en la rama que se desea se quede
 guardado los cambios (por lo general es la rama principal MASTER)*/
+$git checkout <branch_name>
