@@ -70,3 +70,8 @@ git log --grep=“INVIE” –i- Busca los commits que cumplan sin importar may�
 git log – index.html- Busca los commits en un archivo en específico.
 git log -S “Por contenido”- Buscar los commits con el contenido dentro del archivo.
 git log > log.txt - guardar los logs en un archivo txt
+
+#merge
+/*el merge es la fusion de dos ramas de git, donde une los ultimos cambios de la rama principal
+con los ultimos cambios de otra rama con la que se desea hacer el merge. Esto se debe hacer en la rama que se desea se quede
+guardado los cambios (por lo general es la rama principal MASTER)*/
