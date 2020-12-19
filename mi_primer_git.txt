@@ -75,6 +75,8 @@ git log > log.txt - guardar los logs en un archivo txt
 $git branch <branch_name> //nos crea una nueva rama,copia todos los archivos de la rama actual
 $git checkout <branch_name> //cambia de rama
 $git branch //nos lista las ramas que tiene el proyecto
+# para eliminar una rama es con el comando
+$git branch -D <branch_name>
 
 #merge
 /*el merge es la fusion de dos ramas de git, donde une los ultimos cambios de la rama principal
