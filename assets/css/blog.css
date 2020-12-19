@@ -4,9 +4,17 @@ body {
   color: green;
 }
 .content{
-  background: yellow;
+  /*background: yellow;*/
   /*color: black;*/
   border-radius: 5px;
+  border: 2px solid black;
+}
+.cabecera{
+  color: white;
+  display: block;
+  background: blue !important;
+  margin: 15px;
+  padding-top: 10px;
 }
 .card-header{
   color: black;
