@@ -83,3 +83,21 @@ $git branch -D <branch_name>
 con los ultimos cambios de otra rama con la que se desea hacer el merge. Esto se debe hacer en la rama que se desea se quede
 guardado los cambios (por lo general es la rama principal MASTER)*/
 $git checkout <branch_name>
+
+#vinculacion con github
+/*Una vez creado una cuenta de github y creado en esta un repositorio, dentro de este nos aparecera
+la opcion <Code>, donde vamos a copiar el https que es la direccion de nuestro repositorio en github y lo vamos a enlazar
+a nuestro repositorio git*/
+$git remote add origin <url> //agregamos la url a nuestro git 
+$git remote //nos deja visualizar todos los repositorios que tenemos, en este caso tenemos uno con el nombre origin
+$git remote -v //nos dice si tenemos acciones que podemos hacer con nuestro repositorio a remote 
+/*
+-fetch: traernos cosas
+-push: Enviar cosas
+-remote: nos referimos a remote al repositorio en github
+*/
+$git pull origin master //nos trae todos los cambios guardados en el remote
+
+$git push origin master //Mandamos los cambios hechos en nuestra maquina hacia remote 
+/*NOTA: no podemos hacer un push sin antes haber realizado un pull*/
+
