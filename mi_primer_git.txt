@@ -96,8 +96,29 @@ $git remote -v //nos dice si tenemos acciones que podemos hacer con nuestro repo
 -push: Enviar cosas
 -remote: nos referimos a remote al repositorio en github
 */
-$git pull origin master //nos trae todos los cambios guardados en el remote
+$git pull origin main --allow-unrelated-histories //esto es al inicio, se lo ocupa porque cuando se crea un repositorio github
+//este tiene una historia de commits distinta de git y viceversa, por ende no estan relacionados los commits y este comando permite crear esa relacion 
+$git pull origin main //nos trae todos los cambios guardados en el remote
 
-$git push origin master //Mandamos los cambios hechos en nuestra maquina hacia remote 
+$git push origin master:main //Mandamos los cambios hechos en nuestra maquina hacia remote 
 /*NOTA: no podemos hacer un push sin antes haber realizado un pull*/
 
+#Configurar el SSH en local
+
+Primer paso: Generar tus llaves SSH. Recuerda que es muy buena idea proteger tu llave privada con una contraseña.
+ssh-keygen -t rsa -b 4096 -C "tu@email.com"
+# Encender el "servidor" de llaves SSH de tu computadora: 
+eval $(ssh-agent -s)
+
+# Añadir tu llave SSH a este "servidor":
+ssh-add ruta-donde-guardaste-tu-llave-privada
+
+#Conexión a GitHub con SSH
+
+Luego de crear nuestras llaves SSH podemos entregarle la llave pública a GitHub para comunicarnos de forma segura y sin necesidad de escribir nuestro usuario y contraseña todo el tiempo.
+
+Para esto debes entrar a la Configuración de Llaves SSH en GitHub, crear una nueva llave con el nombre que le quieras dar y el contenido de la llave pública de tu computadora.
+
+Ahora podemos actualizar la URL que guardamos en nuestro repositorio remoto, solo que, en vez de guardar la URL con HTTPS, vamos a usar la URL con SSH:
+
+$git remote set-url origin url-ssh-del-repositorio-en-github
