@@ -26,3 +26,25 @@ git config --global user.email "user_email" //Configuracion del correo del usuar
 git commit -m "mensaje" //subir los cambios al repositorio, es de buenas practicas el dejar un mensaje explicando los cambios que se realizo
 git commit -am "mensaje" //guarda en stage y hace commit de una vez, solo funciona con archivos hechos git add anteriormente
 ```
+# revisar la historia del archivo
+```
+$git log <name_file> //historia del los commits, nos muestra los tags
+$git show <name_file> //nos muestra los ultimos cambios hechos en el archivo
+$git diff <tag_name_file_v.a> <tag_name_file_v.b> //comparacion de los distintos commits hechos
+$git diff //usar solo este comando me da los cambios que se hizo en staging y los cambios hechos en el disco duro
+```
+# recupera antiguas versiones
+```
+$git reset <tag_name_file_v> //nos permite volver a una version anterior
+```
+## hay dos tipos de reset
+```
+$git reset <tag_name_file_v> --hard //Todo vuelve al estado anterior
+$git reset <tag_name_file_v> --solf //volvemos al estado anterior pero lo que tenemos en staging sigue en staging
+```
+**que es staging?** --> es el estado del archivo o archivos donde le hemos dado el comando (git add .) es decir tenemos un estado listo para hacer commit
+tambien tenemos
+```
+$git reset HEAD //Sacamos los archivos del area del staging, No para borrarlos ni nada de eso, solo para que los últimos cambios de estos archivos no
+```
+se envíen al último commit, a menos que cambiemos de opinión y los incluyamos de nuevo en staging con git add, por supuesto
